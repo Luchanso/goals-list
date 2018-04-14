@@ -1,15 +1,17 @@
 import { connect } from 'react-redux'
-
+import GoalComponent from '../components/GoalComponent'
+import { addProgress } from '../actions'
+//to get goal of component?
   const mapStateToProps = state => {
     return {
-      goals: state.goals
+      goal: state.goals[0]
     }
   }
    
   const mapDispatchToProps = dispatch => {
     return {
-      onGoalProgress: (goal, progress) => {
-        dispatch(addProgress(goal, progress))
+      onGoalProgress: goal => {
+        dispatch(addProgress(goal, 5))
       }
     }
   }
@@ -17,6 +19,6 @@ import { connect } from 'react-redux'
   const Goal = connect(
     mapStateToProps,
     mapDispatchToProps
-  )(Goal)
+  )(GoalComponent);
    
   export default Goal

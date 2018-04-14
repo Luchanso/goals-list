@@ -28,7 +28,7 @@ describe('store tests', () => {
         const expectedGoal = {
             name, progress, threshold
         }
-
+        //doesn't work ):
         store.dispatch(createGoal(name, progress, threshold))
         expect(store.getState()).toEqual({ goals: [
             {
@@ -39,4 +39,15 @@ describe('store tests', () => {
         ]})
     })
 
+    it('progress increased', () => {
+
+    })
+
+    it('name changed', () => {
+
+    })
+
+    it('progess set', () => {
+        
+    })
 })

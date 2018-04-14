@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux'
 import {
   goals
-} from './goalReducer'
+} from './GoalReducer'
 
 const goalsApp = combineReducers({
   goals
