@@ -10,8 +10,8 @@ import { addProgress } from '../actions'
    
   const mapDispatchToProps = dispatch => {
     return {
-      onGoalProgress: goal => {
-        dispatch(addProgress(goal, 5))
+      onGoalProgress: (goal, progress) => {
+        dispatch(addProgress(goal, progress))
       }
     }
   }

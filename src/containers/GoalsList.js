@@ -12,9 +12,6 @@ import GoalsListComponent from '../components/GoalsListComponent';
     return {
       onGoalCreate: (name, progress, threshold) => {
         dispatch(createGoal(name, progress, threshold))
-      },
-      onGoalProgress: (goal) => {
-        dispatch(addProgress(goal, 5))
       }
     }
   }
