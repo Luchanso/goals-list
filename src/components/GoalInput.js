@@ -9,6 +9,7 @@ const GoalInput = ({value, onChange}) => (
     hintStyle={{color: colors.white}}
     maxLength="2"
     style = {{width: 56}}
+    //todo как корректно очищать элемент? Так работает, но консоль ругается value={value}
     onChange={onChange}
     />
 )

@@ -2,16 +2,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Goal from './GoalComponent'
- 
+
 const GoalsListComponent = ({ goals, onGoalCreate, onGoalProgress }) => (
   <ul>
     {
       goals.map((goal, index) => (
-      <Goal goal={goal} onGoalProgress={onGoalProgress}/>
-    ))}
+        <Goal key={goal.name} goal={goal} onGoalProgress={onGoalProgress} isLast={index + 1 === goals.length} />
+      ))
+    }
   </ul>
 )
- 
+
 GoalsListComponent.propTypes = {
   goals: PropTypes.arrayOf(
     PropTypes.shape({
@@ -22,5 +23,5 @@ GoalsListComponent.propTypes = {
   ).isRequired,
   onGoalCreate: PropTypes.func.isRequired
 }
- 
+
 export default GoalsListComponent

@@ -4,7 +4,7 @@ import { addProgress } from '../actions'
 //to get goal of component?
   const mapStateToProps = state => {
     return {
-      goal: state.goals[0]
+      goal: state.goal
     }
   }
    
@@ -16,9 +16,9 @@ import { addProgress } from '../actions'
     }
   }
    
-  const Goal = connect(
-    mapStateToProps,
-    mapDispatchToProps
-  )(GoalComponent);
-   
+  // const Goal = connect(
+  //   mapStateToProps,
+  //   mapDispatchToProps
+  // )(GoalComponent);
+  //  
   export default Goal
