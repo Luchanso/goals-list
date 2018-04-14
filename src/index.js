@@ -8,7 +8,7 @@ import { createStore } from 'redux'
 import goalsApp from './reducers/reducers'
 import { createGoal, addProgress } from './actions';
 
-export const store = createStore(goalsApp, { goals: [{ name: "test", progress: 10, threshold: 20 }, { name: "test", progress: 10, threshold: 20 }] })
+export const store = createStore(goalsApp, { goals: [{ name: "test", progress: 10, threshold: 200 }, { name: "test", progress: 10, threshold: 20 }] })
 
 ReactDOM.render(
 <Provider store={store}>
