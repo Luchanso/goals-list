@@ -1,13 +1,14 @@
 import { connect } from 'react-redux'
 import GoalComponent from '../components/GoalComponent'
 import { addProgress } from '../actions'
-//to get goal of component?
+
+  // Нужно ли писать здесь это?
   const mapStateToProps = state => {
     return {
       goal: state.goal
     }
   }
-   
+  
   const mapDispatchToProps = dispatch => {
     return {
       onGoalProgress: (goal, progress) => {
@@ -16,9 +17,9 @@ import { addProgress } from '../actions'
     }
   }
    
-  // const Goal = connect(
-  //   mapStateToProps,
-  //   mapDispatchToProps
-  // )(GoalComponent);
-  //  
+  const Goal = connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(GoalComponent);
+   
   export default Goal

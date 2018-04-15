@@ -3,12 +3,12 @@
 
   "name": "Goals list",
   "description": "This extension replaces the new tab page for list your goals.",
-  "version": "0.3",
+  "version": "0.4",
 
- "permissions": [
-   "storage"
- ],
-  
+  "permissions": [
+    "storage"
+  ],
+
   "chrome_url_overrides": {
     "newtab": "index.html"
   },

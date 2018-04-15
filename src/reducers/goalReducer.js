@@ -20,7 +20,7 @@ export function goals(state = [], action) {
         case ADD_PROGRESS:
             return state.map((goal, index) => {
                 if (goal.name === action.goal.name) {
-                    return Object.assign({}, goal, {
+                    return Object.assign({}, goal, { //Зачем нужен Object.assign?
                         progress: goal.progress + action.progress
                     })
                 }

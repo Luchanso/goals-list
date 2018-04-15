@@ -7,7 +7,7 @@ const GoalsListComponent = ({ goals, onGoalCreate, onGoalProgress }) => (
   <ul>
     {
       goals.map((goal, index) => (
-        <Goal key={goal.name} goal={goal} onGoalProgress={onGoalProgress} isLast={index + 1 === goals.length} />
+        <Goal key={goal.name} goal={goal} onGoalProgress={onGoalProgress} isLast={index === goals.length - 1} />
       ))
     }
   </ul>

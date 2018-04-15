@@ -1,0 +1,59 @@
+i {
+    color: white
+}
+
+.goal-outer {
+    width: 90vw
+}
+
+.goal {
+    display: flex;
+    align-items: stretch;
+    margin: 20px;
+}
+
+.goal-interactive {
+    width: 60%;
+}
+
+.goal-name {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* не применяется к material-ui ): */
+/* .progress-bar {
+    background-color: #a3e2f3 !important; 
+    background-clip: padding-box !important;
+    overflow: hidden !important;
+    border-radius: 50 !important;
+    height: 20 !important;
+    margin: 0 5 5 5 !important;
+} */
+
+/* .goal-bar-and-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+} */
+
+.goal-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 5;
+}
+
+.goal-info {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.goal-info > div {
+    align-self: center;
+}

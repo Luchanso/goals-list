@@ -17,7 +17,7 @@
   }
 
 
-  export function setCurrentProgress(goal, progress) { //todo only bigger
+  export function setCurrentProgress(goal, progress) {
     return { type: SET_CURRENT_PROGRESS, goal, progress }
   }
 

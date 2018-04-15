@@ -10,6 +10,9 @@ const GoalInput = ({value, onChange}) => (
     maxLength="2"
     style = {{width: 56}}
     //todo как корректно очищать элемент? Так работает, но консоль ругается value={value}
+    // см. закомментированный код в GoalComponent
+    // хотел элемент вроде:    ___34___ (+)
+    // но в итоге обошёлся обычными кнопками без input-a.
     onChange={onChange}
     />
 )
