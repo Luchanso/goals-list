@@ -1,13 +1,13 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
-import Goal from './GoalComponent'
+import GoalComponent from './GoalComponent'
 
 const GoalsListComponent = ({ goals, onGoalCreate, onGoalProgress }) => (
   <ul>
     {
       goals.map((goal, index) => (
-        <Goal key={goal.name} goal={goal} onGoalProgress={onGoalProgress} isLast={index === goals.length - 1} />
+        <GoalComponent key={goal.name} goal={goal} onGoalProgress={onGoalProgress} isLast={index === goals.length - 1} />
       ))
     }
   </ul>

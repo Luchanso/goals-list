@@ -13,7 +13,6 @@ import GoalsListComponent from '../components/GoalsListComponent';
       onGoalCreate: (name, progress, threshold) => {
         dispatch(createGoal(name, progress, threshold))
       },
-      //Это нужно дублировать, чтобы прокидывать ниже к элементу Goal? без этого не работает.
       onGoalProgress: (goal, progress) => {
         dispatch(addProgress(goal, progress))
       }

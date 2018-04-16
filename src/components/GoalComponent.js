@@ -6,36 +6,38 @@ import PropTypes from 'prop-types';
 import GoalAdd from './GoalAdd';
 import GoalProgressBar from './GoalProgressBar'
 import '../css/goal.css'
+import FloatingActionButton from 'material-ui/FloatingActionButton'
+import ContentAdd from 'material-ui/svg-icons/content/add';
 
 class GoalComponent extends React.Component {
 
     constructor(props) {
         super(props);
-        //this.state = { inputValue: "" }
-        //this.handleInput = this.handleInput.bind(this)
+        this.state = { inputValue: "" }
+        this.handleInput = this.handleInput.bind(this)
         this.handleAddProgressByAmount = this.handleAddProgressByAmount.bind(this)
     }
 
-    // handleInput(event) {
-    //     this.setState({ inputValue: event.target.value })
-    // }
+    handleInput(event) {
+        this.setState({ inputValue: event.target.value })
+    }
 
 
     handleAddProgressByAmount(amount) {
         this.props.onGoalProgress(this.props.goal, Number(amount))
     }
 
-    // handleAddProgress() {
-    //     if (this.state.inputValue) {
-    //         this.props.onGoalProgress(this.props.goal, Number(this.state.inputValue))
-    //     }
-    //     this.setState({ inputValue: "" })
-    // }
+    handleAddProgress() {
+        if (this.state.inputValue) {
+            this.props.onGoalProgress(this.props.goal, Number(this.state.inputValue))
+        }
+        this.setState({ inputValue: "" })
+    }
 
     render() {
         let buttons = [];
-        ["1", "5", "10"].forEach((i) => {
-            buttons.push(<GoalAdd onClick={this.handleAddProgressByAmount} value={i}/>);
+        [1, 5, 10].forEach((i) => {
+            buttons.push(<GoalAdd key={i} onClick={this.handleAddProgressByAmount} value={i}/>);
         })
 
         return (
@@ -50,10 +52,10 @@ class GoalComponent extends React.Component {
                             <div className="goal-buttons">
                                 {buttons}
                             </div>
-                            {/* <GoalInput value={this.state.inputValue} onChange={this.handleInput} /> */}
-                            {/* <FloatingActionButton onClick={() => this.handleAddProgress()}>
-                            <ContentAdd />
-                        </FloatingActionButton> */}
+                            <GoalInput value={this.state.inputValue} onChange={this.handleInput} />
+                            <FloatingActionButton onClick={() => this.handleAddProgress()}>
+                                <ContentAdd />
+                            </FloatingActionButton>
                         </div>
                     </div>
                     <div className="goal-info" >
@@ -62,7 +64,7 @@ class GoalComponent extends React.Component {
                         </div>
                         <div>
                             {/* todo! better algorithm for calculation when timer with new actions and state will be ready */}
-                            <i>progress for day to succeed: 
+                            <i>progress for day to succeed:
                             {Math.ceil((this.props.goal.threshold - this.props.goal.progress) / ((Date.UTC(2018, 7, 9) - Date.now())/(24*60*60*1000)))}</i>
                         </div>
                     </div>
